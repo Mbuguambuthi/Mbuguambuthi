@@ -18,11 +18,11 @@ body{
     font-family: "Roboto", serif;
     font-weight: inherit;
     padding: 0;
-    margin: 0;
+    margin: 0em auto;
     /* background-color:#F0E7E9 ; */
     background-color: #fff;
     color: #000;
-    width: 100%;
+    width: 80%;
     min-width: 100vh;
     height: auto;
 
@@ -234,7 +234,7 @@ header nav ul li a:hover{
     text-align: center;
     border: 0.1rem solid #ccc;
     border-radius: 0.5rem;
-    box-shadow: 0.35rem 0.1rem #ccc ;
+    box-shadow: 0.1rem 0.1rem #ccc ;
 
     
 }
@@ -271,7 +271,7 @@ header nav ul li a:hover{
     text-align: center;
     border: 0.1rem solid #ccc;
     border-radius: 0.5rem;
-    box-shadow: 0.3rem 0.1rem #ccc ;
+    box-shadow: 0.1rem 0.1rem #ccc ;
 }
 
 .b2:hover, :focus{
@@ -303,7 +303,7 @@ header nav ul li a:hover{
     text-align: center;
     border: 0.1rem solid #ccc;
     border-radius: 0.5rem;
-    box-shadow: 0.3rem 0.1rem #ccc ;
+    box-shadow: 0.1rem 0.1rem #ccc ;
 }
 
 .b3:hover, :focus{
@@ -369,7 +369,7 @@ header nav ul li a:hover{
     text-align: center;
     border: 0.1rem solid #ccc;
     border-radius: 0.5rem;
-    box-shadow: 0.35rem 0.1rem #ccc ;
+    box-shadow: 0.1rem 0.1rem #ccc ;
 
     
 }
@@ -406,7 +406,7 @@ header nav ul li a:hover{
     text-align: center;
     border: 0.1rem solid #ccc;
     border-radius: 0.5rem;
-    box-shadow: 0.3rem 0.1rem #ccc ;
+    box-shadow: 0.1rem 0.1rem #ccc ;
 }
 
 .c2:hover, :focus{
@@ -438,7 +438,7 @@ header nav ul li a:hover{
     text-align: center;
     border: 0.1rem solid #ccc;
     border-radius: 0.5rem;
-    box-shadow: 0.3rem 0.1rem #ccc ;
+    box-shadow: 0.1rem 0.1rem #ccc ;
 }
 
 .c3:hover, :focus{
