@@ -6,6 +6,21 @@
     box-sizing: border-box;
 }
 
+:root{
+    /* COLOR */
+    --COLOR: var(--BGCOLOR);
+    --BGCOLOR: #fff;
+    --RDCOLOR: #f00;
+    --CCC-COLOR: #ccc;
+
+    /* CENTER H3-HEADINGS */
+    --CENTER-COLOR: #000;
+    --FS: 1.5rem;
+    --FW: 650;
+    --TA: center;
+
+}
+
 html{
     font-family: "Libre Baskerville", "Roboto", "Exile", serif;
     font-size: 18px;
@@ -20,9 +35,9 @@ body{
     padding: 0;
     margin: 0em auto;
     /* background-color:#F0E7E9 ; */
-    background-color: #fff;
+    background-color:var(--BGCOLOR);
     color: #000;
-    width: 80%;
+    width: 100%;
     min-width: 100vh;
     height: auto;
 
@@ -47,8 +62,8 @@ main{
 
 header{
    
-    color: #fff;
-    /* border: 0.1rem dotted #fff; */
+    color: var(--BGCOLOR);
+    /* border: 0.1rem dotted var(--BGCOLOR); */
     padding: 0em 4em;
     margin: 0em auto;
     width: 90%;
@@ -87,7 +102,7 @@ body{
     padding: 0;
     margin: 0;
     /* background-color:#F0E7E9 ; */
-    background-color: #fff;
+    background-color: var(--BGCOLOR);
     color: #000;
     width: 100%;
     min-width: 100vh;
@@ -114,8 +129,8 @@ main{
 
 header{
    
-    color: #fff;
-    /* border: 0.1rem dotted #fff; */
+    color: var(--BGCOLOR);
+    /* border: 0.1rem dotted var(--BGCOLOR); */
     padding: 0em 2em;
     width: 90%;
 
@@ -142,7 +157,7 @@ header nav ul li{
 
     place-content: center;
     text-align: center;
-    /* background-color: #fff; */
+    /* background-color: var(--BGCOLOR); */
     font-family: "Roboto", serif;
     font-weight: 450;
     font-size: 1.2rem;
@@ -156,9 +171,10 @@ header nav ul li a{
     
 }
 
-header nav ul li a:hover{
+:is(header nav ul li a):hover{
 
-    color: firebrick;
+    color: var(--RDCOLOR);
+    border: 0.14rem solid var(--RDCOLOR);
 
 }
 
@@ -179,7 +195,7 @@ header nav ul li a:hover{
 /* DIV A STYLES */
 
 .a {
-    color: #f00;
+    color: var(--RDCOLOR);
     text-align: center;
     font-size: 2rem;
     font-weight: 600;
@@ -208,7 +224,7 @@ header nav ul li a:hover{
     grid-template-rows: 1fr;
     grid-column: 1/4;
     grid-row: 1/2;
-    color: #f00;
+    color: var(--RDCOLOR);
     font-size: 2rem;
     font-weight: 500;
     text-align: center;
@@ -217,12 +233,15 @@ header nav ul li a:hover{
 
 }
 
-.center{
 
-    color: #000;
-    font-size: 1.5rem;
-    font-weight: 650;
-    text-align: center;
+
+:is(.center1, .center2, .center3, .center4, .center5, .center6){
+    color: var(--CENTER-COLOR);
+    font-size: var(--FS);
+    font-weight: var(--FW);
+    text-align: var(--TA);
+
+
 }
 
  .b1{
@@ -232,35 +251,39 @@ header nav ul li a:hover{
     grid-row: 2/3;
     padding: 0.5rem;
     text-align: center;
-    border: 0.1rem solid #ccc;
+    border: 0.1rem solid var(--CCC-COLOR);
     border-radius: 0.5rem;
-    box-shadow: 0.1rem 0.1rem #ccc ;
+    box-shadow: 0.1rem 0.1rem var(--CCC-COLOR) ;
 
     
 }
 
-.b1:hover, :focus{
-    border: 0.18rem solid #f00 ;
+
+:is(.b1, .b2, .b3):hover{
+    border: 0.18rem solid var(--RDCOLOR) ;
 }
+
 
 .b1 h3{
     /* position: absolute;
     top: -7.75%;
     right: 29%;
-    color: #fff; */
+    color: var(--BGCOLOR); */
     position: relative;
     bottom: 72%;
-    color: #fff;
+    color: var(--BGCOLOR);
 
 
 }
 
-.b1 h3 a{
-    color: #fff;
+:is(.b1, .b2, .b3, .c1, .c2, .c3) h3 a{
+     color: var(--BGCOLOR);
     text-decoration: none;
     background-color: hsl(0, 82%, 46%);
     font-weight: 450;
-}
+
+} 
+
 
 .b2{
     display: grid;
@@ -269,28 +292,18 @@ header nav ul li a:hover{
     grid-row: 2/3;
     padding: 0.5rem;
     text-align: center;
-    border: 0.1rem solid #ccc;
+    border: 0.1rem solid var(--CCC-COLOR);
     border-radius: 0.5rem;
-    box-shadow: 0.1rem 0.1rem #ccc ;
+    box-shadow: 0.1rem 0.1rem var(--CCC-COLOR) ;
 }
 
-.b2:hover, :focus{
-    border: 0.18rem solid #f00 ;
-}
 
 .b2 h3{
     position: relative;
     bottom: 72%;
-    color: #fff;
+    color: var(--BGCOLOR);
 
 
-}
-
-.b2 h3 a{
-    color: #fff;
-    text-decoration: none;
-    background-color: hsl(0, 82%, 46%);
-    font-weight: 450;
 }
 
 
@@ -301,29 +314,19 @@ header nav ul li a:hover{
     grid-row: 2/3;
     padding: 0.76rem;
     text-align: center;
-    border: 0.1rem solid #ccc;
+    border: 0.1rem solid var(--CCC-COLOR);
     border-radius: 0.5rem;
-    box-shadow: 0.1rem 0.1rem #ccc ;
+    box-shadow: 0.1rem 0.1rem var(--CCC-COLOR) ;
 }
 
-.b3:hover, :focus{
-    border: 0.18rem solid #f00 ;
-}
+
 
 .b3 h3{
   position: relative;
     bottom: 89%;
-    color: #fff; 
+    color: var(--BGCOLOR); 
 
 } 
-
-.b3 h3 a{
-    color: #fff;
-    text-decoration: none;
-    background-color: hsl(0, 82%, 46%);
-    font-weight: 450;
-}
-
 
 
 /* DIV C STYLES */
@@ -343,7 +346,7 @@ header nav ul li a:hover{
     grid-template-rows: 1fr;
     grid-column: 1/4;
     grid-row: 1/2;
-    color: #f00;
+    color: var(--RDCOLOR);
     font-size: 2rem;
     font-weight: 500;
     text-align: center;
@@ -367,35 +370,29 @@ header nav ul li a:hover{
     grid-row: 2/3;
     padding: 0.5rem;
     text-align: center;
-    border: 0.1rem solid #ccc;
+    border: 0.1rem solid var(--CCC-COLOR);
     border-radius: 0.5rem;
-    box-shadow: 0.1rem 0.1rem #ccc ;
+    box-shadow: 0.1rem 0.1rem var(--CCC-COLOR) ;
 
     
 }
 
-.c1:hover, :focus{
-    border: 0.18rem solid #f00 ;
+:is(.c1, .c2, .c3):hover{
+    border: 0.18rem solid var(--RDCOLOR) ;
 }
 
 .c1 h3{
     /* position: absolute;
     top: -7.75%;
     right: 29%;
-    color: #fff; */
+    color: var(--BGCOLOR); */
     position: relative;
     bottom: 72%;
-    color: #fff;
+    color: var(--BGCOLOR);
 
 
 }
 
-.c1 h3 a{
-    color: #fff;
-    text-decoration: none;
-    background-color: hsl(0, 82%, 46%);
-    font-weight: 450;
-}
 
 .c2{
     display: grid;
@@ -404,28 +401,18 @@ header nav ul li a:hover{
     grid-row: 2/3;
     padding: 0.5rem;
     text-align: center;
-    border: 0.1rem solid #ccc;
+    border: 0.1rem solid  var(--CCC-COLOR);
     border-radius: 0.5rem;
-    box-shadow: 0.1rem 0.1rem #ccc ;
+    box-shadow: 0.1rem 0.1rem  var(--CCC-COLOR) ;
 }
 
-.c2:hover, :focus{
-    border: 0.18rem solid #f00 ;
-}
 
 .c2 h3{
     position: relative;
     bottom: 52%;
-    color: #fff;
+    color: var(--BGCOLOR);
 
 
-}
-
-.c2 h3 a{
-    color: #fff;
-    text-decoration: none;
-    background-color: hsl(0, 82%, 46%);
-    font-weight: 450;
 }
 
 
@@ -436,28 +423,19 @@ header nav ul li a:hover{
     grid-row: 2/3;
     padding: 0.76rem;
     text-align: center;
-    border: 0.1rem solid #ccc;
+    border: 0.1rem solid  var(--CCC-COLOR);
     border-radius: 0.5rem;
-    box-shadow: 0.1rem 0.1rem #ccc ;
+    box-shadow: 0.1rem 0.1rem  var(--CCC-COLOR) ;
 }
 
-.c3:hover, :focus{
-    border: 0.18rem solid #f00 ;
-}
 
 .c3 h3{
   position: relative;
     bottom: 80%;
-    color: #fff; 
+    color: var(--BGCOLOR); 
 
 } 
 
-.c3 h3 a{
-    color: #fff;
-    text-decoration: none;
-    background-color: hsl(0, 82%, 46%);
-    font-weight: 450;
-}
 
 /* SECTION STYLES */
 
@@ -472,7 +450,7 @@ section {
 }
 
 section h1{
-    color: #f00;
+    color: var(--RDCOLOR);
     font-size: 3.5rem;
     font-weight: 600;
     padding: 1rem;
@@ -481,7 +459,7 @@ section h1{
 }
 
 section img{
-    border: 0.12rem solid#ccc;
+    border: 0.12rem solid var(--CCC-COLOR);
     height: 50px;
     margin-top: 1rem;
     
@@ -490,7 +468,7 @@ section img{
 
 /* svg{
     fill: none;
-    stroke:#ccc ;
+    stroke: var(--CCC-COLOR) ;
     stroke-width: 3;
     stroke-opacity: 0.75;
 
@@ -548,7 +526,7 @@ aside div ul{
 }
 
 aside div ul li{
-    /* background-color:#fff; */
+    /* background-color:var(--BGCOLOR); */
     place-content: center;
     text-align: center;
     margin: 0.1rem;
